@@ -14,5 +14,5 @@ backend/video_inference_outputs/
 runtime_uploads/
 video_inference_outputs/
 
-data/
+/data/
 .ipynb_checkpoints/
