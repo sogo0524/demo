@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: driver-fatigue-intervention-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: FATIGUE_DEVICE
+        value: cpu
+      - key: FATIGUE_MAX_UPLOAD_MB
+        value: "50"
+      - key: FATIGUE_MAX_FRAMES
+        value: "120"
+      - key: FATIGUE_CORS_ORIGINS
+        value: "*"

@@ -1,0 +1,28 @@
+{
+  "model_name": "resnet18",
+  "num_classes": 2,
+  "class_to_idx": {
+    "DROWSY": 0,
+    "NATURAL": 1
+  },
+  "idx_to_class": {
+    "0": "DROWSY",
+    "1": "NATURAL"
+  },
+  "img_size": 224,
+  "normalize_mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "normalize_std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "task_type": "binary_classification",
+  "positive_class": "DROWSY",
+  "negative_class": "NATURAL",
+  "output_description": "Softmax over 2 classes. Use class_to_idx['DROWSY'] to extract drowsy probability.",
+  "notes": "This metadata must match the training-time model architecture and preprocessing."
+}
